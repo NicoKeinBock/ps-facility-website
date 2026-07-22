@@ -1,0 +1,14 @@
+# Verzeichnis-Listing verhindern
+Options -Indexes
+
+# Diese Datei nach dem einmaligen Erzeugen des Passwort-Hashes
+# am besten löschen. Solange sie noch existiert, hier sperren:
+<Files "generate_hash.php">
+  Require all denied
+</Files>
+
+# config.php sperren und auf Fehlerseite umleiten
+<Files "config.php">
+  Require all denied
+</Files>
+ErrorDocument 403 /error.html

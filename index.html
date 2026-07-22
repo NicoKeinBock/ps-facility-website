@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PS Facility Services — Alles glänzt.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="canonical" href="https://ps-services.at/">
+<!-- Meta Description & SEO -->
+<meta name="description" content="PS Facility Services — Ihr Reinigungsunternehmen in Traun & Linz-Umgebung. Büro-, Fassaden-, Industriereinigung, Winterdienst, Hausbetreuung und mehr.">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn ...) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PS Facility Services">
+<meta property="og:title" content="PS Facility Services — Alles glänzt.">
+<meta property="og:description" content="Ihr Servicepartner für Sauberkeit — innen wie außen. Büroreinigung, Industriehallen, Fassaden, Winterdienst und mehr aus Traun.">
+<meta property="og:image" content="https://ps-services.at/wp-content/uploads/2021/03/ps_facility_services_reinigung_linz_web-118-von-121-1200x630.jpg">
+<meta property="og:url" content="https://ps-services.at/">
+<meta property="og:locale" content="de_AT">
+
+<!-- Strukturierte Daten für Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "PS Facility Services",
+  "image": "https://ps-services.at/wp-content/uploads/2021/03/ps_facility_services_reinigung_linz_web-118-von-121-1200x630.jpg",
+  "url": "https://ps-services.at/",
+  "telephone": "+43722924824",
+  "email": "office@ps-services.at",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Wiener Bundesstraße 181",
+    "postalCode": "4050",
+    "addressLocality": "Traun",
+    "addressCountry": "AT"
+  },
+  "areaServed": "Linz und Umgebung",
+  "priceRange": "$$"
+}
+</script>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PS Facility Services — Alles glänzt.">
+<meta name="twitter:description" content="Ihr Servicepartner für Sauberkeit — innen wie außen, aus Traun.">
+<meta name="twitter:image" content="https://ps-services.at/wp-content/uploads/2021/03/ps_facility_services_reinigung_linz_web-118-von-121-1200x630.jpg">
+</head>
+<script>
+  function renderMap(){
+    document.getElementById('mapContainer').innerHTML = `
+      <iframe
+        src="https://www.google.com/maps?q=Wiener+Bundesstra%C3%9Fe+181,+4050+Traun&output=embed"
+        width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Standort PS Facility Services — Wiener Bundesstraße 181, 4050 Traun">
+      </iframe>`;
+  }
+
+  function loadMap(){
+    localStorage.setItem('ps_maps_consent', 'true');
+    renderMap();
+  }
+
+  function cookieAccept(){
+    localStorage.setItem('ps_cookie_choice', 'accepted');
+    localStorage.setItem('ps_maps_consent', 'true');
+    document.getElementById('cookieBanner').classList.remove('visible');
+    renderMap();
+  }
+
+  function cookieDecline(){
+    localStorage.setItem('ps_cookie_choice', 'declined');
+    document.getElementById('cookieBanner').classList.remove('visible');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const choice = localStorage.getItem('ps_cookie_choice');
+    const mapsOk = localStorage.getItem('ps_maps_consent') === 'true';
+    if(!choice){
+      document.getElementById('cookieBanner').classList.add('visible');
+    }
+    if(mapsOk){
+      renderMap();
+    }
+  });
+</script>
+<body>
+<div id="custom-cursor">
+    <img src="images/cursor.png" alt="">
+</div>
+<script>
+(function(){
+  const cursor = document.getElementById("custom-cursor");
+  const cursorImg = cursor.querySelector("img");
+  const mq = window.matchMedia("(hover: none) and (pointer: coarse)");
+
+  let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
+  let rafId = null;
+  let active = false;
+
+  function onMouseMove(e){ mouseX = e.clientX; mouseY = e.clientY; }
+  function onMouseDown(){ cursorImg.src = "images/splash.png"; }
+  function onMouseUp(){ cursorImg.src = "images/cursor.png"; }
+
+  function animate(){
+    currentX += (mouseX - currentX) * 0.15;
+    currentY += (mouseY - currentY) * 0.15;
+    cursor.style.left = currentX + "px";
+    cursor.style.top = currentY + "px";
+    rafId = requestAnimationFrame(animate);
+  }
+
+  function enableCursor(){
+    if (active) return;
+    active = true;
+    // Startposition auf letzte bekannte Mausposition setzen, kein Sprung von (0,0)
+    currentX = mouseX; currentY = mouseY;
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mousedown", onMouseDown);
+    document.addEventListener("mouseup", onMouseUp);
+    animate();
+  }
+
+  function disableCursor(){
+    if (!active) return;
+    active = false;
+    document.removeEventListener("mousemove", onMouseMove);
+    document.removeEventListener("mousedown", onMouseDown);
+    document.removeEventListener("mouseup", onMouseUp);
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = null;
+  }
+
+  function updateCursorState(e){
+    if (e.matches) disableCursor(); else enableCursor();
+  }
+
+  // Initial und bei jedem Wechsel (z.B. Tablet-Modus, DevTools, Umschalten) neu bewerten
+  updateCursorState(mq);
+  if (mq.addEventListener) {
+    mq.addEventListener("change", updateCursorState);
+  } else {
+    mq.addListener(updateCursorState); // Fallback für ältere Browser
+  }
+})();
+</script>
+<header>
+  <div class="nav">
+       <div class="meister-badge2" onclick="openMeisterModal()" role="button" tabindex="0" aria-label="Info zum Meisterbetrieb-Siegel"><img src="images/meisterbetrieb.png" alt="Meisterbetrieb Siegel"></div>
+    <div class="logo">
+      <a href="#weareps"><img class="logo-img" src="images/Neues PS Logo Schwarz Nico.png" alt="PS Facility Services"></a>
+    </div>
+    <nav class="links" id="navLinks">
+      <a href="#werte">Über uns</a>
+      <a href="#services">Leistungen</a>
+      <a href="#referenzen-liste">Referenzen</a>
+      <a href="karriere.html">Karriere</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="nav-contact">
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+      </button>
+      <button type="button" class="nav-icon-btn" data-action="phone" data-tel="+43722924824" data-copy="+43 7229 24 8 24" aria-label="Anrufen oder Telefonnummer kopieren">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 3.5h3.2c.5 0 .9.35 1 .84l.75 3.6c.08.4-.05.8-.35 1.07l-1.6 1.42a12.6 12.6 0 0 0 5.57 5.57l1.42-1.6a1.2 1.2 0 0 1 1.07-.35l3.6.75c.5.1.84.53.84 1.03V19.5c0 .66-.55 1.18-1.2 1.13C10.9 20.15 3.85 13.1 3.37 4.7 3.32 4.05 3.84 3.5 4.5 3.5Z"/></svg>
+        <span class="nic-feedback">Kopiert!</span>
+      </button>
+      <button type="button" class="nav-icon-btn" data-action="copy" data-copy="office@ps-services.at" aria-label="E-Mail-Adresse kopieren">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M4 6.5l8 6.5 8-6.5"/></svg>
+        <span class="nic-feedback">Kopiert!</span>
+      </button>
+      <button type="button" class="nav-icon-btn" data-action="copy" data-copy="Wiener Bundesstraße 181, 4050 Traun" aria-label="Adresse kopieren">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6.1-6.5-11A6.5 6.5 0 0 1 18.5 10c0 4.9-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>
+        <span class="nic-feedback">Kopiert!</span>
+      </button>
+    </div>
+  </div>
+</header>
+<script>
+(function(){
+  function isMobileDevice(){
+    return window.matchMedia('(hover: none) and (pointer: coarse)').matches
+      || window.matchMedia('(max-width: 768px)').matches;
+  }
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch(err) {}
+    document.body.removeChild(ta);
+  }
+  function copyText(text, btn){
+    var done = function(){
+      btn.classList.add('copied');
+      setTimeout(function(){ btn.classList.remove('copied'); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(function(){ fallbackCopy(text); done(); });
+    } else {
+      fallbackCopy(text); done();
+    }
+  }
+  document.querySelectorAll('.nav-icon-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if (btn.dataset.action === 'phone' && isMobileDevice()) {
+        window.location.href = 'tel:' + btn.dataset.tel;
+        return;
+      }
+      copyText(btn.dataset.copy, btn);
+    });
+  });
+
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if(menuToggle && navLinks){
+    function closeMenu(){
+      navLinks.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+    function toggleMenu(){
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.classList.toggle('open', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+    menuToggle.addEventListener('click', function(e){
+      e.stopPropagation();
+      toggleMenu();
+    });
+    navLinks.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('click', function(e){
+      if(navLinks.classList.contains('open') && !navLinks.contains(e.target) && e.target !== menuToggle){
+        closeMenu();
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeMenu();
+    });
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 900) closeMenu();
+    });
+  }
+})();
+</script>
+
+<section class="hero" id="weareps">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="eyebrow" data-content-key="hero.eyebrow">REINIGUNGSUNTERNEHMEN · OBERÖSTERREICH</div>
+    <h1 class="headline"><span class="wipe-mask"><span data-content-key="hero.headline_line1">ALLES</span><br><span data-content-key="hero.headline_line2">GLÄNZT.</span></span></h1>
+    <p class="hero-sub" data-content-key="hero.subtext">Von der Büroreinigung bis zur Industriehalle: Wir sind Ihr Servicepartner für Sauberkeit — innen wie außen. Schnell, zuverlässig und mit Spitzenqualität aus Traun.</p>
+    <div class="hero-ctas">
+      <a href="#kontakt" class="btn btn-primary" data-content-key="hero.cta_primary">Jetzt Angebot anfragen →</a>
+      <a href="#services" class="btn btn-ghost" data-content-key="hero.cta_secondary">Leistungen ansehen</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="num" data-content-key="hero.stat1_num">80+</div><div class="lbl" data-content-key="hero.stat1_label">Mitarbeiter</div></div>
+      <div><div class="num" data-content-key="hero.stat2_num">100+</div><div class="lbl" data-content-key="hero.stat2_label">Kunden</div></div>
+      <div><div class="num" data-content-key="hero.stat3_num">200+</div><div class="lbl" data-content-key="hero.stat3_label">Betreute Objekte</div></div>
+    </div>
+  </div>
+</section>
+<div class="wipe-divider"></div>
+
+<section class="werte" id="werte">
+  <div class="wrap">
+    <div class="section-head">
+          <div class="meister-badge" onclick="openMeisterModal()" role="button" tabindex="0" aria-label="Info zum Meisterbetrieb-Siegel"><img src="images/meisterbetrieb.png" alt="Meisterbetrieb Siegel"></div>
+      <div class="section-tag" data-content-key="werte.tag">WARUM PS</div>
+      <h2 class="section-title" data-content-key="werte.title">Wir machen es auf unsere eigene Art.</h2>
+    </div>
+    <div class="werte-grid">
+      <div class="werte-item">
+        <span class="idx mono" data-content-key="werte.item1_label">01 / PROFESSIONELL</span>
+        <h3 data-content-key="werte.item1_title">Sauber, schnell, effizient</h3>
+        <p data-content-key="werte.item1_text">Gebäudereinigung, Desinfektion oder Sonderreinigung — wir erledigen jeden Auftrag mit geschultem Personal und dem passenden Equipment.</p>
+      </div>
+      <div class="werte-item">
+        <span class="idx mono" data-content-key="werte.item2_label">02 / TERMINGERECHT</span>
+        <h3 data-content-key="werte.item2_title">Heute angerufen, morgen vor Ort</h3>
+        <p data-content-key="werte.item2_text">Kurze Wege, klare Absprachen: Rufen Sie uns an und wir sind kurzfristig einsatzbereit — dynamisch, flexibel, pünktlich.</p>
+      </div>
+      <div class="werte-item">
+        <span class="idx mono" data-content-key="werte.item3_label">03 / ZUVERLÄSSIG</span>
+        <h3 data-content-key="werte.item3_title">Ohne langes Prozedere</h3>
+        <p data-content-key="werte.item3_text">Ob Viren, Schmutz oder Dreck — wir kümmern uns unkompliziert um die Sauberkeit und den Werterhalt Ihres Objekts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galerie">
+  <div class="gal-grid">
+  <a class="gal-item" href="javascript:void(0)"><img src="https://ps-services.at/wp-content/uploads/2021/02/reinigungsfirma_linz_ps_facility_services-42-von-96-1500x630.jpg" alt="PS Facility Services im Einsatz"></a>
+  <a class="gal-item" href="javascript:void(0)"><img src="https://ps-services.at/wp-content/uploads/2021/03/ps_facility_services_reinigung_linz_web-50-von-121-1200x630.jpg" alt="Reinigungsteam bei der Arbeit"></a>
+  <a class="gal-item" href="javascript:void(0)"><img src="https://ps-services.at/wp-content/uploads/2021/03/ps_facility_services_reinigung_linz_web-114-von-121-1200x630.jpg" alt="Gebäudereinigung Detail"></a>
+  <a class="gal-item" href="javascript:void(0)"><img src="https://ps-services.at/wp-content/uploads/2021/03/reinigungsfirma-linz-ps-facility-services_web-52-von-96-1200x630.jpg" alt="PS Facility Services Team"></a>
+  <a class="gal-item" href="javascript:void(0)"><img src="images/imagr.png" alt="PS Facility Services — weiterer Einblick"></a>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">LEISTUNGEN</div>
+      <h2 class="section-title">Viele Bereiche. Eine Nummer.</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-service-key="buero" onclick="openServiceModal('buero')"><span class="s-num mono">S01</span><h4>Unterhaltsreinigung</h4></div>
+      <div class="service-card" data-service-key="fassade" onclick="openServiceModal('fassade')"><span class="s-num mono">S02</span><h4>Glas- &amp; Fassadenreinigung</h4></div>
+      <div class="service-card" data-service-key="industrie" onclick="openServiceModal('industrie')"><span class="s-num mono">S03</span><h4>Industrie- &amp; Gewerbereinigung</h4></div>
+      <div class="service-card" data-service-key="winterdienst" onclick="openServiceModal('winterdienst')"><span class="s-num mono">S04</span><h4>Winterdienst</h4></div>
+      <div class="service-card" data-service-key="bauend" onclick="openServiceModal('bauend')"><span class="s-num mono">S05</span><h4>Bauendreinigung</h4></div>
+      <div class="service-card" data-service-key="grundboden" onclick="openServiceModal('grundboden')"><span class="s-num mono">S06</span><h4>Grundreinigung</h4></div>
+      <div class="service-card" data-service-key="parkplatz" onclick="openServiceModal('parkplatz')"><span class="s-num mono">S07</span><h4>Parkplatz- &amp; Tiefgaragenreinigung</h4></div>
+      <div class="service-card" data-service-key="sonder" onclick="openServiceModal('sonder')"><span class="s-num mono">S08</span><h4>Spezialreinigung</h4></div>
+      <div class="service-card" data-service-key="gruen" onclick="openServiceModal('gruen')"><span class="s-num mono">S09</span><h4>Grünpflege</h4></div>
+      <div class="service-card" data-service-key="stiegenhaus" onclick="openServiceModal('stiegenhaus')"><span class="s-num mono">S10</span><h4>Stiegenhaus &amp; Hausbetreuung</h4></div>
+      <div class="service-card" data-service-key="pv" onclick="openServiceModal('pv')"><span class="s-num mono">S11</span><h4>PV-Anlagenreinigung</h4></div>
+      <div class="service-card" data-service-key="mehr" onclick="openServiceModal('mehr')"><span class="s-num mono">S12</span><h4>Sonderanfrage</h4></div>
+    </div>
+    <p class="services-hint mono">Klicken Sie auf eine Kategorie für Details ↑</p>
+  </div>
+</section>
+
+<section class="referenzen" id="referenzen">
+  <div class="ref-row" id="refTicker">
+    <span>IMG Center</span><span>Linz AG</span><span>IBE</span><span>Arinco</span><span>Beinkofer</span><span>Böllhoff</span><span>Corner4</span><span>GES Consult</span><span>Nabu Stulln</span><span>TN-ICT</span><span>Axenda</span><span>KLK Ortner</span>
+    <span>IMG Center</span><span>Linz AG</span><span>IBE</span><span>Arinco</span><span>Beinkofer</span><span>Böllhoff</span><span>Corner4</span><span>GES Consult</span><span>Nabu Stulln</span><span>TN-ICT</span><span>Axenda</span><span>KLK Ortner</span>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt">
+  <div class="wrap">
+    <div class="kontakt-grid">
+      <div>
+        <img class="kontakt-photo" src="./images/image_Index.jpg" alt="PS Facility Services vor Ort">
+        <div class="kontakt-big" data-content-key="kontakt.heading">Reden wir über Ihr Gebäude.</div>
+        <p class="kontakt-copy" data-content-key="kontakt.text">Überzeugen Sie sich selbst — rufen Sie an oder schreiben Sie uns kurz, worum es geht. Wir melden uns in der Regel noch am selben Tag zurück.</p>
+        <div class="kontakt-detail">
+          <div class="k-label">Adresse</div>
+          <div class="k-value k-copyable" data-copy="Wiener Bundesstraße 181, 4050 Traun">Wiener Bundesstraße 181, 4050 Traun<button type="button" class="k-copy-btn" aria-label="Adresse kopieren"><span class="k-copy-icon">⧉</span><span class="k-copy-feedback">Kopiert!</span></button></div>
+        </div>
+        <div class="kontakt-detail">
+          <div class="k-label">Telefon</div>
+          <div class="k-value k-copyable" data-copy="+43 7229 24 8 24">+43 7229 24 8 24<button type="button" class="k-copy-btn" data-tel="+43722924824" aria-label="Telefonnummer kopieren oder anrufen"><span class="k-copy-icon">⧉</span><span class="k-copy-feedback">Kopiert!</span></button></div>
+        </div>
+        <div class="kontakt-detail">
+          <div class="k-label">E-Mail</div>
+          <div class="k-value">
+            <span class="k-copyable" data-copy="office@ps-services.at"><a href="mailto:office@ps-services.at">office@ps-services.at</a><button type="button" class="k-copy-btn" aria-label="E-Mail kopieren"><span class="k-copy-icon">⧉</span><span class="k-copy-feedback">Kopiert!</span></button></span>
+          </div>
+        </div>
+        <div class="kontakt-detail kontakt-qr-detail">
+          <div class="k-label">QR-Code</div>
+          <div class="kontakt-qr">
+            <img src="./images/qr-code.png" alt="QR-Code für PS Facility Services" width="140" height="140">
+            <span class="kontakt-qr-text">Scannen für den direkten Weg zu uns</span>
+          </div>
+        </div>
+      </div>
+      <form class="kform" id="kontaktForm">
+        <div class="kform-ref" id="kformRef">
+          <span class="mono" id="kformRefText"></span>
+          <button type="button" id="kformRefClear" aria-label="Bezug entfernen">✕</button>
+        </div>
+        <input type="hidden" name="service" id="serviceRef">
+        <div>
+          <label>Name *</label>
+          <input type="text" name="name" placeholder="Ihr Name" required>
+        </div>
+        <div>
+          <label>E-Mail *</label>
+          <input type="email" name="email" placeholder="ihre@email.at" required>
+        </div>
+        <div>
+          <label>Nachricht</label>
+          <textarea rows="4" name="message" placeholder="Worum geht's?"></textarea>
+        </div>
+        <button type="submit">Anfrage senden →</button>
+      </form>
+      <div class="kontakt-map">
+  <div id="mapContainer" style="width:100%; height:55vh;">
+    <div class="map-placeholder" id="mapPlaceholder">
+      <p>Zum Schutz Ihrer Daten wird die Google-Maps-Karte erst nach Ihrer Zustimmung geladen. Dabei werden Daten an Google (USA) übertragen.</p>
+      <button onclick="loadMap()">Karte laden</button>
+    </div>
+  </div>
+  <a class="kontakt-map-link mono" href="https://www.google.com/maps/dir/?api=1&destination=Wiener+Bundesstra%C3%9Fe+181,+4050+Traun" target="_blank" rel="noopener">Route planen ↗</a>
+</div>
+
+<!-- Cookie-Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>Wir verwenden auf dieser Website keine Tracking-Cookies. Externe Inhalte wie die Google-Maps-Karte laden wir erst nach Ihrer Zustimmung. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+  <div class="cookie-actions">
+    <button class="cookie-decline" onclick="cookieDecline()">Nur notwendige</button>
+    <button class="cookie-accept" onclick="cookieAccept()">Alles akzeptieren</button>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById('kontaktForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = this.name.value.trim();
+    const email = this.email.value.trim();
+    const message = this.message.value.trim();
+    const service = this.service.value.trim();
+
+    const subject = service
+      ? 'Anfrage über die Website — ' + service + ' — ' + name
+      : 'Anfrage über die Website — ' + name;
+
+    const body =
+      'Name: ' + name + '\n' +
+      'E-Mail: ' + email + '\n' +
+      (service ? 'Bereich: ' + service + '\n' : '') +
+      '\n' +
+      (message || 'Kein Nachrichtentext angegeben.');
+
+    const mailtoLink =
+      'mailto:office@ps-services.at' +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailtoLink;
+  });
+
+  function setServiceRef(title){
+    const input = document.getElementById('serviceRef');
+    const badge = document.getElementById('kformRef');
+    const text = document.getElementById('kformRefText');
+    input.value = title;
+    text.textContent = 'Bezug: ' + title;
+    badge.classList.add('active');
+  }
+
+  document.getElementById('kformRefClear').addEventListener('click', function(){
+    document.getElementById('serviceRef').value = '';
+    document.getElementById('kformRef').classList.remove('active');
+  });
+</script>
+
+<section class="referenzen-liste" id="referenzen-liste">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">UNSERE KUNDEN</div>
+      <h2 class="section-title">Unternehmen, die uns vertrauen.</h2>
+    </div>
+    <div class="ref-grid" id="refGrid">
+      <a class="ref-card" href="https://www.img-center.com/" target="_blank" rel="noopener"><span class="r-name">IMG Center</span><span class="r-arrow">↗</span></a>
+      <a class="ref-card" href="https://www.linzag.at/portal/de/home" target="_blank" rel="noopener"><span class="r-name">Linz AG</span><span class="r-arrow">↗</span></a>
+      <a class="ref-card" href="https://www.ibe.co.at/" target="_blank" rel="noopener"><span class="r-name">IBE</span><span class="r-arrow">↗</span></a>
+      <a class="ref-card" href="https://www.arinco.at/index.html" target="_blank" rel="noopener"><span class="r-name">Arinco</span><span class="r-arrow">↗</span></a>
+      <a class="ref-card" href="https://www.beinkofer.at/" target="_blank" rel="noopener"><span class="r-name">Beinkofer</span><span class="r-arrow">↗</span></a>
+      <a class="ref-card" href="https://www.boellhoff.com/at-de/index.php" target="_blank" rel="noopener"><span class="r-name">Böllhoff</span><span class="r-arrow">↗</span></a>
+      <a class="ref-card" href="https://www.corner4.com/" target="_blank" rel="noopener"><span class="r-name">Corner4</span><span class="r-arrow">↗</span></a>
+      <a class="ref-card" href="http://www.ges-consult.at/" target="_blank" rel="noopener"><span class="r-name">GES Consult</span><span class="r-arrow">↗</span></a>
+      <a class="ref-card" href="https://www.nabu-stulln.de/de/home" target="_blank" rel="noopener"><span class="r-name">Nabu Stulln</span><span class="r-arrow">↗</span></a>
+      <a class="ref-card" href="https://www.tn-ict.com/" target="_blank" rel="noopener"><span class="r-name">TN-ICT</span><span class="r-arrow">↗</span></a>
+      <a class="ref-card" href="https://www.axenda.at/" target="_blank" rel="noopener"><span class="r-name">Axenda</span><span class="r-arrow">↗</span></a>
+      <a class="ref-card" href="https://www.klk-ortner.at" target="_blank" rel="noopener"><span class="r-name">KLK Ortner</span><span class="r-arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-word">PS FACILITY SERVICES</div>
+        <p data-content-key="footer.brand_text">Ihre Reinigungsfirma in Linz und Linz-Umgebung. Servicepartner für alle Reinigungsbereiche — innen wie außen.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#werte">Über uns</a></li>
+          <li><a href="#services">Leistungen</a></li>
+          <li><a href="karriere.html">Karriere</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Rechtliches</h5>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-content-key="footer.copyright">© 2026 PS Facility Services</span>
+      <span data-content-key="footer.location">TRAUN, OBERÖSTERREICH</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="serviceModal" onclick="if(event.target===this)closeServiceModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeServiceModal()" aria-label="Schließen">✕</button>
+    <button class="modal-nav-btn modal-nav-prev" onclick="prevServiceModal()" aria-label="Vorherige Leistung">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="modal-nav-btn modal-nav-next" onclick="nextServiceModal()" aria-label="Nächste Leistung">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="modal-scroll">
+      <span class="modal-tag mono" id="modalTag"></span>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-desc" id="modalDesc"></p>
+      <ul class="modal-list" id="modalList"></ul>
+      <a href="#kontaktForm" class="btn btn-primary modal-cta" onclick="requestServiceOffer()">Angebot anfragen →</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="meisterModal" onclick="if(event.target===this)closeMeisterModal()">
+  <div class="modal-box meister-modal-box">
+    <button class="modal-close" onclick="closeMeisterModal()" aria-label="Schließen">✕</button>
+    <div class="modal-scroll">
+      <span class="modal-tag mono">ZERTIFIZIERUNG</span>
+      <h3 class="modal-title">Meisterbetrieb</h3>
+      <p class="modal-desc">Das Siegel kennzeichnet Betriebe, die von einer Person mit erfolgreich abgelegter Meisterprüfung geführt werden.</p>
+      <ul class="modal-list">
+        <li>
+          <span class="mi-name">Geprüfte Qualifikation</span>
+          <span class="mi-desc">Die Meisterprüfung ist der höchste Ausbildungsabschluss im österreichischen Handwerk und bestätigt fachliche wie unternehmerische Kompetenz.</span>
+        </li>
+        <li>
+          <span class="mi-name">Qualitätsversprechen</span>
+          <span class="mi-desc">Für Sie bedeutet das Siegel geprüftes Fachwissen, verlässliche Ausführung und Verantwortung für das eigene Team.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const serviceData = {
+    buero: {
+      num: 'S01',
+      title: 'Unterhaltsreinigung',
+      desc: 'Regelmäßige, zuverlässige Reinigung für Büros, Praxen und öffentliche Gebäude — abgestimmt auf Ihren Rhythmus.',
+      items: [
+        { name: 'Büroreinigung', desc: 'Tägliche oder wöchentliche Unterhaltsreinigung von Arbeitsplätzen, Küchen und Sanitärbereichen.' },
+        { name: 'Housekeeping', desc: 'Laufende Pflege und Ordnung in Empfangsbereichen, Fluren und Gemeinschaftsräumen.' },
+        { name: 'Geschäfts- u. Gewerberäume', desc: 'Individuelle Reinigungskonzepte für Shops, Praxen und Gewerbeflächen jeder Größe.' },
+        { name: 'Arztpraxen', desc: 'Hygienegerechte Reinigung von Ordinationen und Wartebereichen nach den Anforderungen medizinischer Einrichtungen.' }
+      ]
+    },
+    fassade: {
+      num: 'S02',
+      title: 'Glas- & Fassadenreinigung',
+      desc: 'Von der Glasfassade bis zur Fassadenverkleidung — wir sorgen dafür, dass Ihr Gebäude auch von außen glänzt. Dies zählt zu unseren Sonderreinigungen.',
+      items: [
+        { name: 'Glas- u. Fassadenreinigung', desc: 'Schonende Reinigung von Glasflächen, Fassaden und Verkleidungen mit passendem Equipment.' },
+        { name: 'Graffitientfernung u. Bautenschutz', desc: 'Fachgerechte Entfernung von Graffiti sowie vorbeugende Schutzbeschichtungen für Oberflächen.' }
+      ]
+    },
+    industrie: {
+      num: 'S03',
+      title: 'Industrie- & Gewerbereinigung',
+      desc: 'Reinigungslösungen für Produktionsstätten, Werkstätten und technische Anlagen — auch außerhalb der Betriebszeiten. Dies zählt zu unseren Sonderreinigungen.',
+      items: [
+        { name: 'Industriehallen', desc: 'Grund- und Unterhaltsreinigung großflächiger Hallen inkl. Böden und Anlagenteile.' },
+        { name: 'Werkstätte', desc: 'Reinigung von Werkstätten unter Berücksichtigung von Ölen, Spänen und Betriebsstoffen.' },
+        { name: 'Industrieanlagen', desc: 'Reinigung technischer Anlagen und Maschinenumgebungen nach individueller Absprache.' }
+      ]
+    },
+    winterdienst: {
+      num: 'S04',
+      title: 'Winterdienst',
+      desc: 'Schnee und Eis zuverlässig im Griff — damit Gehwege und Zufahrten sicher begehbar bleiben.',
+      items: [
+        { name: 'Schneeräumung', desc: 'Räumung von Gehwegen, Zufahrten und Firmengeländen bei Schneefall.' },
+        { name: 'Streudienst', desc: 'Streuung gegen Glatteis nach behördlichen Vorgaben, laufend an die Wetterlage angepasst.' },
+        { name: 'Winterbereitschaft', desc: 'Kontinuierliche Beobachtung der Wetterlage und kurzfristiger Einsatz im Ernstfall.' }
+      ]
+    },
+    bauend: {
+      num: 'S05',
+      title: 'Bauendreinigung',
+      desc: 'Nach Bauarbeiten oder Renovierung übergeben wir Ihr Objekt bezugsfertig — sauber bis ins Detail. Dies zählt zu unseren Sonderreinigungen.',
+      items: [
+        { name: 'Bauendreinigung', desc: 'Entfernung von Staub-, Farb- und Folienresten nach Bau- oder Renovierungsarbeiten, bezugsfertig übergeben.' },
+        { name: 'Baufeinreinigung', desc: 'Abschließende Feinreinigung vor der Übergabe, inklusive Fenster, Böden und Sanitärbereiche.' }
+      ]
+    },
+    grundboden: {
+      num: 'S06',
+      title: 'Grund- & Bodenreinigung',
+      desc: 'Tiefenreinigung von Böden und Textilien — für nachhaltigen Glanz und ein frisches Raumklima. Dies zählt zu unseren Sonderreinigungen.',
+      items: [
+        { name: 'Bodengrundreinigung', desc: 'Grundreinigung und Aufbereitung stark beanspruchter Bodenbeläge aller Art.' },
+        { name: 'Bodenversiegelung', desc: 'Schutzversiegelung zur Werterhaltung und leichteren Pflege empfindlicher Bodenbeläge.' },
+        { name: 'Teppich- u. Teppichbodenreinigung', desc: 'Tiefenreinigung von Teppichen und textilen Bodenbelägen zur Entfernung hartnäckiger Verschmutzungen.' },
+        { name: 'Polster- u. Vorhangreinigung', desc: 'Schonende Reinigung von Polstermöbeln, Sesseln und Vorhängen.' }
+      ]
+    },
+    parkplatz: {
+      num: 'S07',
+      title: 'Parkplatz- & Tiefgaragenreinigung',
+      desc: 'Von der Kehrreinigung bis zur Nassreinigung — für saubere, sichere Park- und Zufahrtsflächen. Dies zählt zu unseren Sonderreinigungen.',
+      items: [
+        { name: 'Parkplatzreinigung', desc: 'Kehrreinigung und Pflege von Parkflächen und Außenstellplätzen.' },
+        { name: 'Tiefgaragenreinigung', desc: 'Nassreinigung von Tiefgaragen und Zufahrten inklusive Bodenablauf.' }
+      ]
+    },
+    sonder: {
+      num: 'S08',
+      title: 'Spezialreinigung',
+      desc: 'Für alles, was über die klassische Reinigung hinausgeht — individuell nach Absprache.',
+      items: [
+        { name: 'Eisstrahlen', desc: 'Schonende Trockeneisreinigung zur Entfernung hartnäckiger Verschmutzungen ohne chemische Rückstände.' },
+        { name: 'Graffitientfernung', desc: 'Fachgerechte Entfernung von Graffiti von Fassaden und Oberflächen.' },
+         { name: 'Desinfektionsreinigung', desc: 'Professionelle Desinfektion von Oberflächen und Räumen nach aktuellen Hygienestandards.' },
+        { name: 'Einzel- u. Sonderaufträge', desc: 'Individuelle Reinigungsaufträge außerhalb des Regelbetriebs, kurzfristig und nach Bedarf.' }
+      ]
+    },
+    gruen: {
+      num: 'S09',
+      title: 'Grünpflege',
+      desc: 'Ganzjährige Pflege Ihrer Außenanlagen, damit Rasen, Beete und Hecken stets gepflegt aussehen.',
+      items: [
+        { name: 'Grünanlagenpflege', desc: 'Rasenschnitt, Heckenschnitt und Pflege von Beeten und Grünflächen nach Bedarf.' }
+      ]
+    },
+    stiegenhaus: {
+      num: 'S10',
+      title: 'Stiegenhaus & Hausbetreuung',
+      desc: 'Rundum-Betreuung für Wohn- und Geschäftsobjekte — von der Stiege bis zur allgemeinen Hausordnung.',
+      items: [
+        { name: 'Stiegenhausreinigung', desc: 'Regelmäßige Reinigung von Stiegenhäusern, Handläufen und Gemeinschaftsflächen.' },
+        { name: 'Hausbetreuung', desc: 'Laufende Kontrolle und Pflege des Objekts, kleine Instandhaltungsarbeiten und Ansprechpartner vor Ort.' }
+      ]
+    },
+    pv: {
+      num: 'S11',
+      title: 'PV-Anlagenreinigung',
+      desc: 'Verschmutzte Photovoltaik-Module verlieren Leistung — wir sorgen für maximalen Ertrag Ihrer Anlage. Dies zählt zu unseren Sonderreinigungen.',
+      items: [
+        { name: 'PV-Anlagenreinigung', desc: 'Schonende Reinigung von Solarmodulen zur Erhaltung von Effizienz und Ertrag.' }
+      ]
+    },
+    mehr: {
+      num: 'S12',
+      title: 'Sonderanfrage',
+      desc: 'Nicht jede Leistung passt in eine Kategorie — sprechen Sie uns einfach auf Ihren individuellen Bedarf an.',
+      items: [
+        { name: 'Individuelle Reinigungsaufträge', desc: 'Für Anfragen außerhalb unserer klassischen Leistungsbereiche finden wir gemeinsam die passende Lösung.' },
+        { name: 'Kombinierte Leistungspakete', desc: 'Mehrere Bereiche aus einer Hand — abgestimmt auf Ihr Objekt und Ihre Anforderungen.' }
+      ]
+    }
+  };
+
+  const serviceOrder = ['buero','fassade','industrie','winterdienst','bauend','grundboden','parkplatz','sonder','gruen','stiegenhaus','pv','mehr'];
+  let activeService = null;
+  let activeServiceKey = null;
+
+  function openServiceModal(key){
+    const data = serviceData[key];
+    if(!data) return;
+    activeService = data.title;
+    activeServiceKey = key;
+    document.getElementById('modalTag').textContent = data.num + ' / LEISTUNG';
+    document.getElementById('modalTitle').textContent = data.title;
+    document.getElementById('modalDesc').textContent = data.desc;
+    const list = document.getElementById('modalList');
+    list.innerHTML = '';
+    data.items.forEach(function(item){
+      const li = document.createElement('li');
+      const name = document.createElement('span');
+      name.className = 'mi-name';
+      name.textContent = item.name;
+      const desc = document.createElement('span');
+      desc.className = 'mi-desc';
+      desc.textContent = item.desc;
+      li.appendChild(name);
+      li.appendChild(desc);
+      list.appendChild(li);
+    });
+    document.getElementById('serviceModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeServiceModal(){
+    document.getElementById('serviceModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function openMeisterModal(){
+    document.getElementById('meisterModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMeisterModal(){
+    document.getElementById('meisterModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' && document.activeElement && document.activeElement.classList.contains('meister-badge2')){
+      openMeisterModal();
+    }
+    if(e.key === 'Enter' && document.activeElement && document.activeElement.classList.contains('meister-badge')){
+      openMeisterModal();
+    }
+  });
+
+  function prevServiceModal(){
+    if(!activeServiceKey) return;
+    const idx = serviceOrder.indexOf(activeServiceKey);
+    const prevIdx = (idx - 1 + serviceOrder.length) % serviceOrder.length;
+    openServiceModal(serviceOrder[prevIdx]);
+  }
+
+  function nextServiceModal(){
+    if(!activeServiceKey) return;
+    const idx = serviceOrder.indexOf(activeServiceKey);
+    const nextIdx = (idx + 1) % serviceOrder.length;
+    openServiceModal(serviceOrder[nextIdx]);
+  }
+
+  function requestServiceOffer(){
+    if(activeService) setServiceRef(activeService);
+    closeServiceModal();
+  }
+
+  document.addEventListener('keydown', function(e){
+    if(!document.getElementById('serviceModal').classList.contains('active')) return;
+    if(e.key === 'Escape') closeServiceModal();
+    if(e.key === 'ArrowLeft') prevServiceModal();
+    if(e.key === 'ArrowRight') nextServiceModal();
+  });
+
+  // Klick-zum-Kopieren für Kontaktdaten (auf mobilen Geräten: Telefonnummern direkt anrufen)
+  document.querySelectorAll('.k-copyable').forEach(function(el){
+    const btn = el.querySelector('.k-copy-btn');
+    if(!btn) return;
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      const isMobile = window.matchMedia('(hover: none) and (pointer: coarse)').matches || window.matchMedia('(max-width: 768px)').matches;
+      const tel = btn.getAttribute('data-tel');
+      if(isMobile && tel){
+        window.location.href = 'tel:' + tel;
+        return;
+      }
+      const text = el.getAttribute('data-copy');
+      const done = function(){
+        btn.classList.add('copied');
+        setTimeout(function(){ btn.classList.remove('copied'); }, 1600);
+      };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done).catch(function(){
+          fallbackCopy(text); done();
+        });
+      } else {
+        fallbackCopy(text); done();
+      }
+    });
+  });
+
+  function fallbackCopy(text){
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch(err) {}
+    document.body.removeChild(ta);
+  }
+</script>
+
+<script>
+  // Lädt die bearbeitbaren Texte aus content.json und setzt sie in alle
+  // Elemente mit einem data-content-key Attribut ein (z.B. "hero.eyebrow").
+  (function(){
+    fetch('content.json', { cache: 'no-store' })
+      .then(function(res){ return res.ok ? res.json() : null; })
+      .then(function(data){
+        if(!data) return;
+        document.querySelectorAll('[data-content-key]').forEach(function(el){
+          const path = el.getAttribute('data-content-key').split('.');
+          let val = data;
+          for(const part of path){
+            if(val && typeof val === 'object' && part in val){ val = val[part]; }
+            else { val = undefined; break; }
+          }
+          if(typeof val === 'string' && val.trim() !== ''){
+            el.textContent = val;
+          }
+        });
+
+        // Leistungen (Service-Modale) mit den Texten aus content.json überschreiben
+        if(data.leistungen && typeof serviceData === 'object'){
+          Object.keys(data.leistungen).forEach(function(key){
+            if(serviceData[key]){
+              serviceData[key] = data.leistungen[key];
+            }
+          });
+          document.querySelectorAll('.service-card[data-service-key]').forEach(function(card){
+            const key = card.getAttribute('data-service-key');
+            const entry = data.leistungen[key];
+            const h4 = card.querySelector('h4');
+            if(entry && entry.title && h4){
+              h4.textContent = entry.title;
+            }
+          });
+        }
+
+        // Referenzen (Ticker oben + Kunden-Grid) aus content.json aufbauen
+        if(Array.isArray(data.referenzen) && data.referenzen.length){
+          const ticker = document.getElementById('refTicker');
+          if(ticker){
+            const names = data.referenzen.map(function(r){ return r.name || ''; }).filter(Boolean);
+            const doubled = names.concat(names); // für den nahtlosen Lauf-Effekt
+            ticker.innerHTML = doubled.map(function(n){
+              return '<span>' + n.replace(/</g,'&lt;') + '</span>';
+            }).join('');
+          }
+          const grid = document.getElementById('refGrid');
+          if(grid){
+            const cardHtml = function(r){
+              const name = (r.name || '').replace(/</g,'&lt;');
+              const url = r.url || '';
+              if(url){
+                return '<a class="ref-card" href="' + url.replace(/"/g,'&quot;') + '" target="_blank" rel="noopener"><span class="r-name">' + name + '</span><span class="r-arrow">↗</span></a>';
+              }
+              return '<div class="ref-card"><span class="r-name">' + name + '</span></div>';
+            };
+
+            const PAGE_SIZE = 12;
+            const refs = data.referenzen;
+            const pages = [];
+            for(let i = 0; i < refs.length; i += PAGE_SIZE){
+              pages.push(refs.slice(i, i + PAGE_SIZE));
+            }
+
+            function renderPage(items){
+              grid.innerHTML = items.map(cardHtml).join('');
+            }
+
+            renderPage(pages[0]);
+
+            // Mehr als 12 Referenzen: alle paar Sekunden zur nächsten Seite überblenden
+            if(pages.length > 1){
+              let pageIndex = 0;
+              setInterval(function(){
+                pageIndex = (pageIndex + 1) % pages.length;
+                grid.style.opacity = '0';
+                setTimeout(function(){
+                  renderPage(pages[pageIndex]);
+                  grid.style.opacity = '1';
+                }, 500);
+              }, 5000);
+            }
+          }
+        }
+      })
+      .catch(function(){ /* content.json nicht erreichbar: Standardtexte bleiben stehen */ });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutz — PS Facility Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<!-- Meta Description & SEO -->
+<meta name="description" content="PS Facility Services — Ihr Reinigungsunternehmen in Traun & Linz-Umgebung. Büro-, Fassaden-, Industriereinigung, Winterdienst, Hausbetreuung und mehr.">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn ...) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="PS Facility Services — Alles glänzt.">
+<meta property="og:description" content="Ihr Servicepartner für Sauberkeit — innen wie außen. Büroreinigung, Industriehallen, Fassaden, Winterdienst und mehr aus Traun.">
+<meta property="og:image" content="https://ps-services.at/wp-content/uploads/2021/03/ps_facility_services_reinigung_linz_web-118-von-121-1200x630.jpg">
+<meta property="og:url" content="https://ps-services.at/">
+<meta property="og:locale" content="de_AT">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PS Facility Services — Alles glänzt.">
+<meta name="twitter:description" content="Ihr Servicepartner für Sauberkeit — innen wie außen, aus Traun.">
+<meta name="twitter:image" content="https://ps-services.at/wp-content/uploads/2021/03/ps_facility_services_reinigung_linz_web-118-von-121-1200x630.jpg">
+</head>
+
+<body>
+<div id="custom-cursor">
+    <img src="images/cursor.png" alt="">
+</div>
+<script>
+  const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+
+  if (!isTouchDevice) {
+    const cursor = document.getElementById("custom-cursor");
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animate() {
+        currentX += (mouseX - currentX) * 0.15;
+        currentY += (mouseY - currentY) * 0.15;
+
+        cursor.style.left = currentX + "px";
+        cursor.style.top = currentY + "px";
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    const cursorImg = document.querySelector("#custom-cursor img");
+
+    document.addEventListener("mousedown", () => {
+        cursorImg.src = "images/splash.png";
+    });
+
+    document.addEventListener("mouseup", () => {
+        cursorImg.src = "images/cursor.png";
+    });
+  } else {
+    const cursorEl = document.getElementById("custom-cursor");
+    if (cursorEl) cursorEl.remove();
+  }
+</script>
+<header>
+  <div class="nav">
+    <div class="logo">
+      <a href="./index.html"><img class="logo-img" src="images/Neues PS Logo Schwarz Nico.png" alt="PS Facility Services"></a>
+    </div>
+    <nav class="links">
+      <a href="index.html#werte">Über uns</a>
+      <a href="index.html#services">Leistungen</a>
+      <a href="index.html#referenzen-liste">Referenzen</a>
+      <a href="karriere.html">Karriere</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+    <div class="nav-contact">
+      <button type="button" class="nav-icon-btn" data-action="phone" data-tel="+43722924824" data-copy="+43 7229 24 8 24" aria-label="Anrufen oder Telefonnummer kopieren">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 3.5h3.2c.5 0 .9.35 1 .84l.75 3.6c.08.4-.05.8-.35 1.07l-1.6 1.42a12.6 12.6 0 0 0 5.57 5.57l1.42-1.6a1.2 1.2 0 0 1 1.07-.35l3.6.75c.5.1.84.53.84 1.03V19.5c0 .66-.55 1.18-1.2 1.13C10.9 20.15 3.85 13.1 3.37 4.7 3.32 4.05 3.84 3.5 4.5 3.5Z"/></svg>
+        <span class="nic-feedback">Kopiert!</span>
+      </button>
+      <button type="button" class="nav-icon-btn" data-action="copy" data-copy="office@ps-services.at" aria-label="E-Mail-Adresse kopieren">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M4 6.5l8 6.5 8-6.5"/></svg>
+        <span class="nic-feedback">Kopiert!</span>
+      </button>
+      <button type="button" class="nav-icon-btn" data-action="copy" data-copy="Wiener Bundesstraße 181, 4050 Traun" aria-label="Adresse kopieren">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6.1-6.5-11A6.5 6.5 0 0 1 18.5 10c0 4.9-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>
+        <span class="nic-feedback">Kopiert!</span>
+      </button>
+    </div>
+  </div>
+</header>
+<script>
+(function(){
+  function isMobileDevice(){
+    return window.matchMedia('(hover: none) and (pointer: coarse)').matches
+      || window.matchMedia('(max-width: 768px)').matches;
+  }
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch(err) {}
+    document.body.removeChild(ta);
+  }
+  function copyText(text, btn){
+    var done = function(){
+      btn.classList.add('copied');
+      setTimeout(function(){ btn.classList.remove('copied'); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(function(){ fallbackCopy(text); done(); });
+    } else {
+      fallbackCopy(text); done();
+    }
+  }
+  document.querySelectorAll('.nav-icon-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if (btn.dataset.action === 'phone' && isMobileDevice()) {
+        window.location.href = 'tel:' + btn.dataset.tel;
+        return;
+      }
+      copyText(btn.dataset.copy, btn);
+    });
+  });
+})();
+</script>
+
+<section class="page-head">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Startseite</a> / Datenschutz</div>
+    <h1 class="page-title" data-content-key="datenschutz.page_title">Datenschutz</h1>
+  </div>
+</section>
+
+<div class="wipe-divider"></div>
+
+<section class="policy">
+  <div class="wrap">
+    <div class="policy-grid">
+      <div>
+
+        <div class="policy-section" id="informationspflicht">
+          <span class="p-num mono">01</span>
+          <h3 data-content-key="datenschutz.s01_title">Erklärung zur Informationspflicht (DSGVO)</h3>
+          <p data-content-key="datenschutz.s01_p1">Wir legen großen Wert auf den Schutz Ihrer Daten. Um Sie in vollem Umfang über die Verwendung personenbezogener Daten zu informieren, bitten wir Sie, die folgenden Datenschutzhinweise zur Kenntnis zu nehmen.</p>
+        </div>
+
+        <div class="policy-section" id="geltungsbereich">
+          <span class="p-num mono">02</span>
+          <h3 data-content-key="datenschutz.s02_title">Geltungsbereich dieser Datenschutzerklärung</h3>
+          <p data-content-key="datenschutz.s02_p1">Diese Datenschutzerklärung klärt Sie als Nutzer dieser Website über die Art, den Umfang und die Zwecke der Erhebung und Verwendung personenbezogener Daten — beispielsweise Cookies — dieser Website auf.</p>
+        </div>
+
+        <div class="policy-section" id="automatische-speicherung">
+          <span class="p-num mono">03</span>
+          <h3 data-content-key="datenschutz.s03_title">Automatische Datenspeicherung</h3>
+          <p data-content-key="datenschutz.s03_p1">Wenn Sie diese Webseite besuchen, speichert der Webserver automatisch Daten wie die IP-Adresse Ihres Geräts, die Adressen der besuchten Unterseiten, Details zu Ihrem Browser (z. B. Chrome, Firefox, Edge) sowie Datum und Uhrzeit.</p>
+          <p data-content-key="datenschutz.s03_p2">Wir nutzen diese Daten nicht und geben sie nicht weiter, können jedoch nicht ausschließen, dass diese Daten bei Vorliegen von rechtswidrigem Verhalten eingesehen werden.</p>
+        </div>
+
+        <div class="policy-section" id="persoenliche-daten">
+          <span class="p-num mono">04</span>
+          <h3 data-content-key="datenschutz.s04_title">Speicherung persönlicher Daten</h3>
+          <p data-content-key="datenschutz.s04_p1">Persönliche Daten, die Sie uns auf dieser Website elektronisch übermitteln — etwa Name, E-Mail-Adresse, Adresse oder andere Angaben im Rahmen eines Formulars — werden gemeinsam mit Zeitpunkt und IP-Adresse nur zum jeweils angegebenen Zweck verwendet, sicher verwahrt und nicht an Dritte weitergegeben.</p>
+          <p data-content-key="datenschutz.s04_p2">Wir nutzen Ihre persönlichen Daten somit nur für die Kommunikation mit jenen Besuchern, die Kontakt ausdrücklich wünschen, und für die Abwicklung der auf dieser Website angebotenen Dienstleistungen. Eine Weitergabe ohne Zustimmung erfolgt nicht; eine Einsichtnahme bei rechtswidrigem Verhalten kann jedoch nicht ausgeschlossen werden.</p>
+          <p data-content-key="datenschutz.s04_p3">Bei Übermittlung per E-Mail — somit abseits dieser Website — können wir keine sichere Übertragung garantieren. Wir empfehlen, vertrauliche Daten niemals unverschlüsselt per E-Mail zu versenden.</p>
+        </div>
+
+        <div class="policy-section" id="rechte">
+          <span class="p-num mono">05</span>
+          <h3 data-content-key="datenschutz.s05_title">Ihre Rechte</h3>
+          <p>Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei der zuständigen Aufsichtsbehörde beschweren — in Österreich ist dies die Datenschutzbehörde: <a href="https://www.dsb.gv.at/" target="_blank" rel="noopener" style="text-decoration:underline;">dsb.gv.at</a>.</p>
+        </div>
+
+        <div class="policy-section" id="cookies">
+          <span class="p-num mono">06</span>
+          <h3 data-content-key="datenschutz.s06_title">Cookies</h3>
+          <p data-content-key="datenschutz.s06_p1">Unsere Website verwendet HTTP-Cookies, um nutzerspezifische Daten zu speichern. Es gibt Erstanbieter-Cookies (von unserer Website) und Drittanbieter-Cookies (z. B. von Google Analytics). Man unterscheidet drei Kategorien:</p>
+          <ul>
+            <li data-content-key="datenschutz.s06_li1">Unbedingt notwendige Cookies für grundlegende Funktionen der Website</li>
+            <li data-content-key="datenschutz.s06_li2">Funktionelle Cookies zur Sicherstellung der Leistung</li>
+            <li data-content-key="datenschutz.s06_li3">Zielorientierte Cookies zur Verbesserung des Benutzererlebnisses</li>
+          </ul>
+          <p data-content-key="datenschutz.s06_p2">Einige Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Sie ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen. Sie können Ihren Browser so einrichten, dass er Sie über das Setzen von Cookies informiert und dies nur im Einzelfall erlaubt.</p>
+        </div>
+
+        <div class="policy-section" id="links">
+          <span class="p-num mono">07</span>
+          <h3 data-content-key="datenschutz.s07_title">Links zu anderen Websites und sozialen Medien</h3>
+          <p data-content-key="datenschutz.s07_p1">Auf dieser Website werden Links zu anderen Websites gesetzt, dies erfolgt lediglich zu Informationszwecken. Diese Websites stehen nicht unter unserer Kontrolle und fallen daher nicht unter diese Datenschutzerklärung.</p>
+          <p data-content-key="datenschutz.s07_p2">Außerdem besteht die Möglichkeit, über Plugins mit folgenden sozialen Netzwerken zu interagieren:</p>
+          <ul>
+            <li data-content-key="datenschutz.s07_li1">Facebook, betrieben von Facebook Ireland Ltd, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland</li>
+            <li data-content-key="datenschutz.s07_li2">Instagram, betrieben von Instagram LLC, 1 Hacker Way, Building 14 First Floor, Menlo Park, CA, USA</li>
+          </ul>
+        </div>
+
+        <div class="policy-section" id="facebook-pixel">
+          <span class="p-num mono">08</span>
+          <h3 data-content-key="datenschutz.s08_title">Facebook-Pixel</h3>
+          <p data-content-key="datenschutz.s08_p1">Wir verwenden auf der Website das Facebook-Pixel — ein JavaScript-Code-Ausschnitt, mit dem Facebook Userhandlungen verfolgen kann, sofern Sie über Facebook-Ads auf die Website gekommen sind. Ausgelöste Aktionen werden in einem oder mehreren Cookies gespeichert, die einen Abgleich mit Ihrem Facebook-Konto ermöglichen; Facebook löscht diese Daten anschließend wieder.</p>
+          <p data-content-key="datenschutz.s08_p2">Die erhobenen Daten sind für uns anonym und nicht einsehbar und werden nur im Rahmen von Werbeanzeigenschaltungen nutzbar. Sind Sie als Facebook-User angemeldet, wird der Besuch unserer Website automatisch Ihrem Facebook-Konto zugeordnet.</p>
+          <p data-content-key="datenschutz.s08_p3">Wir möchten unsere Dienstleistungen nur jenen Personen zeigen, die sich wirklich dafür interessieren. Facebook nutzt die erhobenen Daten außerdem zu eigenen Analyse- und Werbezwecken.</p>
+        </div>
+
+        <div class="policy-section" id="widerruf">
+          <span class="p-num mono">09</span>
+          <h3 data-content-key="datenschutz.s09_title">Änderung und Widerruf</h3>
+          <p data-content-key="datenschutz.s09_p1">Sie können Ihre Zustimmung zu dieser Datenschutzerklärung jederzeit widerrufen. Danach ist jede weitere Verwendung Ihrer Daten unzulässig, und eine elektronische Kontaktaufnahme unter der angegebenen E-Mail-Adresse ist nicht mehr zulässig.</p>
+          <p data-content-key="datenschutz.s09_p2">Dieser Widerruf wirkt sich nicht auf ein allfällig bestehendes Mandantsverhältnis aus — dieses ist separat zu widerrufen. Übermittelte Daten können jederzeit per Mail oder Telefon geändert werden.</p>
+        </div>
+
+        <div class="policy-section" id="auskunftsrecht">
+          <span class="p-num mono">10</span>
+          <h3 data-content-key="datenschutz.s10_title">Auskunftsrecht</h3>
+          <p data-content-key="datenschutz.s10_p1">Sie haben jederzeit das Recht auf Auskunft über die bezüglich Ihrer Person gespeicherten Daten, deren Herkunft und Empfänger sowie den Zweck der Speicherung, Namen und Anschrift des Verantwortlichen.</p>
+          <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung und anderer datenschutzrechtlicher Bestimmungen ist: <strong>Petar Čačić</strong></p>
+        </div>
+
+        <div class="policy-section" id="firmensitz">
+          <span class="p-num mono">11</span>
+          <h3 data-content-key="datenschutz.s11_title">Firmensitz</h3>
+          <p>Wiener Bundesstraße 181, 4050 Traun<br>
+          <a href="tel:+43722924824" style="text-decoration:underline;">+43 7229 24 8 24</a> · <a href="tel:+436766606995" style="text-decoration:underline;">0676 / 66 06 995</a></p>
+          <p data-content-key="datenschutz.s11_p1">Alle Vertragsabschlüsse unterliegen den AGB von PS – Facility Services.</p>
+        </div>
+
+      </div>
+
+      <div>
+        <div class="toc">
+          <h5>Inhalt</h5>
+          <ol>
+            <li><a href="#informationspflicht">Informationspflicht</a></li>
+            <li><a href="#geltungsbereich">Geltungsbereich</a></li>
+            <li><a href="#automatische-speicherung">Automatische Speicherung</a></li>
+            <li><a href="#persoenliche-daten">Persönliche Daten</a></li>
+            <li><a href="#rechte">Ihre Rechte</a></li>
+            <li><a href="#cookies">Cookies</a></li>
+            <li><a href="#links">Links &amp; soziale Medien</a></li>
+            <li><a href="#facebook-pixel">Facebook-Pixel</a></li>
+            <li><a href="#widerruf">Änderung &amp; Widerruf</a></li>
+            <li><a href="#auskunftsrecht">Auskunftsrecht</a></li>
+            <li><a href="#firmensitz">Firmensitz</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Lädt die bearbeitbaren Texte aus content.json (Reiter "Datenschutz" im Admin-Panel).
+  (function(){
+    fetch('content.json', { cache: 'no-store' })
+      .then(function(res){ return res.ok ? res.json() : null; })
+      .then(function(data){
+        if(!data) return;
+        document.querySelectorAll('[data-content-key]').forEach(function(el){
+          const path = el.getAttribute('data-content-key').split('.');
+          let val = data;
+          for(const part of path){
+            if(val && typeof val === 'object' && part in val){ val = val[part]; }
+            else { val = undefined; break; }
+          }
+          if(typeof val === 'string' && val.trim() !== ''){
+            el.textContent = val;
+          }
+        });
+      })
+      .catch(function(){ /* content.json nicht erreichbar: Standardtexte bleiben stehen */ });
+  })();
+</script>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-word">PS FACILITY SERVICES</div>
+        <p>Ihre Reinigungsfirma in Linz und Linz-Umgebung. Servicepartner für alle Reinigungsbereiche — innen wie außen.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html#werte">Über uns</a></li>
+          <li><a href="index.html#services">Leistungen</a></li>
+          <li><a href="karriere.html">Karriere</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Rechtliches</h5>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 PS Facility Services</span>
+      <span>TRAUN, OBERÖSTERREICH</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

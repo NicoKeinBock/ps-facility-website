@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seite nicht gefunden — PS Facility Services</title>
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Meta Description & SEO -->
+<meta name="description" content="PS Facility Services — Ihr Reinigungsunternehmen in Traun & Linz-Umgebung. Büro-, Fassaden-, Industriereinigung, Winterdienst, Hausbetreuung und mehr.">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn ...) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="PS Facility Services — Alles glänzt.">
+<meta property="og:description" content="Ihr Servicepartner für Sauberkeit — innen wie außen. Büroreinigung, Industriehallen, Fassaden, Winterdienst und mehr aus Traun.">
+<meta property="og:image" content="https://ps-services.at/wp-content/uploads/2021/03/ps_facility_services_reinigung_linz_web-118-von-121-1200x630.jpg">
+<meta property="og:url" content="https://ps-services.at/">
+<meta property="og:locale" content="de_AT">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PS Facility Services — Alles glänzt.">
+<meta name="twitter:description" content="Ihr Servicepartner für Sauberkeit — innen wie außen, aus Traun.">
+<meta name="twitter:image" content="https://ps-services.at/wp-content/uploads/2021/03/ps_facility_services_reinigung_linz_web-118-von-121-1200x630.jpg">
+</head>
+<body>
+<div id="custom-cursor">
+    <img src="images/cursor.png" alt="">
+</div>
+<script>
+  const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+
+  if (!isTouchDevice) {
+    const cursor = document.getElementById("custom-cursor");
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animate() {
+        currentX += (mouseX - currentX) * 0.15;
+        currentY += (mouseY - currentY) * 0.15;
+
+        cursor.style.left = currentX + "px";
+        cursor.style.top = currentY + "px";
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    const cursorImg = document.querySelector("#custom-cursor img");
+
+    document.addEventListener("mousedown", () => {
+        cursorImg.src = "images/splash.png";
+    });
+
+    document.addEventListener("mouseup", () => {
+        cursorImg.src = "images/cursor.png";
+    });
+  } else {
+    const cursorEl = document.getElementById("custom-cursor");
+    if (cursorEl) cursorEl.remove();
+  }
+</script>
+<header>
+  <div class="nav">
+    <div class="logo">
+      <a href="index.html"><img class="logo-img" src="https://ps-services.at/wp-content/uploads/2021/01/Logo-final.png" alt="PS Facility Services"></a>
+    </div>
+    <nav class="links">
+      <a href="index.html#werte">Über uns</a>
+      <a href="index.html#services">Leistungen</a>
+      <a href="index.html#referenzen-liste">Referenzen</a>
+      <a href="karriere.html">Karriere</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+    <div class="nav-contact">
+      <button type="button" class="nav-icon-btn" data-action="phone" data-tel="+43722924824" data-copy="+43 7229 24 8 24" aria-label="Anrufen oder Telefonnummer kopieren">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 3.5h3.2c.5 0 .9.35 1 .84l.75 3.6c.08.4-.05.8-.35 1.07l-1.6 1.42a12.6 12.6 0 0 0 5.57 5.57l1.42-1.6a1.2 1.2 0 0 1 1.07-.35l3.6.75c.5.1.84.53.84 1.03V19.5c0 .66-.55 1.18-1.2 1.13C10.9 20.15 3.85 13.1 3.37 4.7 3.32 4.05 3.84 3.5 4.5 3.5Z"/></svg>
+        <span class="nic-feedback">Kopiert!</span>
+      </button>
+      <button type="button" class="nav-icon-btn" data-action="copy" data-copy="office@ps-services.at" aria-label="E-Mail-Adresse kopieren">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M4 6.5l8 6.5 8-6.5"/></svg>
+        <span class="nic-feedback">Kopiert!</span>
+      </button>
+      <button type="button" class="nav-icon-btn" data-action="copy" data-copy="Wiener Bundesstraße 181, 4050 Traun" aria-label="Adresse kopieren">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6.1-6.5-11A6.5 6.5 0 0 1 18.5 10c0 4.9-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>
+        <span class="nic-feedback">Kopiert!</span>
+      </button>
+    </div>
+  </div>
+</header>
+<script>
+(function(){
+  function isMobileDevice(){
+    return window.matchMedia('(hover: none) and (pointer: coarse)').matches
+      || window.matchMedia('(max-width: 768px)').matches;
+  }
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch(err) {}
+    document.body.removeChild(ta);
+  }
+  function copyText(text, btn){
+    var done = function(){
+      btn.classList.add('copied');
+      setTimeout(function(){ btn.classList.remove('copied'); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(function(){ fallbackCopy(text); done(); });
+    } else {
+      fallbackCopy(text); done();
+    }
+  }
+  document.querySelectorAll('.nav-icon-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if (btn.dataset.action === 'phone' && isMobileDevice()) {
+        window.location.href = 'tel:' + btn.dataset.tel;
+        return;
+      }
+      copyText(btn.dataset.copy, btn);
+    });
+  });
+})();
+</script>
+
+<section class="page-head">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Startseite</a> / Seite nicht gefunden</div>
+    <h1 class="page-title">404. <br>Hier glänzt<br>nichts.</h1>
+  </div>
+</section>
+
+<div class="wipe-divider"></div>
+
+<section class="legal">
+  <div class="wrap" style="max-width:640px;">
+    <p style="font-size:16px; line-height:1.8; color:var(--steel); margin-bottom:40px;">
+      Die gesuchte Seite existiert nicht oder wurde verschoben. Vielleicht ist beim Tippen der Adresse etwas schiefgelaufen — kein Grund zur Sorge, wir helfen Ihnen weiter.
+    </p>
+    <div class="hero-ctas" style="margin-bottom:0;">
+      <a href="index.html" class="btn" style="border-color:var(--ink); color:var(--ink);">Zur Startseite →</a>
+      <a href="index.html#kontakt" class="btn" style="color:var(--ink);">Kontakt aufnehmen</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-word">PS FACILITY SERVICES</div>
+        <p>Ihre Reinigungsfirma in Linz und Linz-Umgebung. Servicepartner für alle Reinigungsbereiche — innen wie außen.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html#werte">Über uns</a></li>
+          <li><a href="index.html#services">Leistungen</a></li>
+          <li><a href="karriere.html">Karriere</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Rechtliches</h5>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 PS Facility Services</span>
+      <span>TRAUN, OBERÖSTERREICH</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
